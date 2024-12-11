@@ -47,16 +47,10 @@ if (!isset($_SESSION['username'])) {
                             <a class="nav-link" aria-current="page" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#services">services</a>
+                            <a class="nav-link" aria-current="page" href="#aboutus">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">about us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projects">projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">contact</a>
+                            <a class="nav-link" href="#contact">Contact</a>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
@@ -79,6 +73,10 @@ if (!isset($_SESSION['username'])) {
                                             $res_email = $result['email'];
                                             $res_id = $result['id'];
                                         }
+
+
+                                        echo "<a class='dropdown-item' href='edit.php?id=$res_id'>Change Profile</a>";
+
 
                                         ?>
 
@@ -113,17 +111,57 @@ if (!isset($_SESSION['username'])) {
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12 text-content">
                     <h1>Welcome to Gatot-Gym</h1>
-                    <p> Kehidupan yang layak di dasari dari tubuh yang sehat juga
+                    <p> Stay Healthy and Always Feeling Strong
                     </p>
                 </div>
                 <div class="col-lg-8 col-md-12 col-sm-12">
-                    <img src="images/download.jpg" alt="" class="img-fluid">
+                    <img src="images/backgatot.jpg" alt="" class="img-fluid">
                 </div>
 
             </div>
         </div>
     </section>
-
+<!-- package section -->
+<section id="packages" class="package-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Choose Your Membership</h2>
+        <div class="row">
+            <!-- Package 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Basic</h5>
+                        <p class="card-text">Join Gatot Membership for 1 Month</p>
+                        <p class="card-text fw-bold">Rp 100.000</p>
+                        <a href="#" class="btn btn-primary">Choose</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Package 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Standard</h5>
+                        <p class="card-text">Join Gatot Membership for 2 Month</p>
+                        <p class="card-text fw-bold">Rp 180.000</p>
+                        <a href="#" class="btn btn-primary">Choose</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Package 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Premium</h5>
+                        <p class="card-text">Join Gatot Membership for 1 Month and Get a Personal Trainer</p>
+                        <p class="card-text fw-bold">Rp 500.000</p>
+                        <a href="#" class="btn btn-primary">Choose</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- footer section  -->
 
@@ -133,18 +171,14 @@ if (!isset($_SESSION['username'])) {
                 <div class="col-lg-3 col-md-12 col-sm-12">
                     <p class="logo"><i class="bi bi-chat"></i>Gatot Gym</p>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-6">
                     <ul class="d-flex">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">services</a></li>
-                        <li><a href="#">projects</a></li>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">contact</a></li>
+                        
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-md-12 col-sm-12">
-                    <p>&copy;2023_BragSpot</p>
+                    <p>&copy;2023 Gatot Gym</p>
                 </div>
 
                 <div class="col-lg-1 col-md-12 col-sm-12">
@@ -157,12 +191,7 @@ if (!isset($_SESSION['username'])) {
             </div>
 
         </div>
-
     </footer>
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
